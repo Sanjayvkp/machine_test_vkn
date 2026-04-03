@@ -147,94 +147,48 @@ class _ProfileTabState extends State<ProfileTab> {
                         ],
                       ),
                       const SizedBox(height: 24),
-                      LayoutBuilder(
-                        builder: (context, constraints) {
-                          final isSmallScreen = constraints.maxWidth < 300;
-                          
-                          if (isSmallScreen) {
-                            return Column(
-                              children: [
-                                _buildInfoCard(
-                                  iconWidget: SvgPicture.asset(
-                                    'assets/icons/settings_icon_rides.svg',
-                                    width: 24,
+
+                      Row(
+                        children: [
+                          Expanded(
+                            child: _buildInfoCard(
+                              iconWidget: SvgPicture.asset(
+                                'assets/icons/settings_icon_rides.svg',
+                                width: 24,
+                              ),
+                              title: '4.3 ★',
+                              subtitle: '2,211 rides',
+                              bgColor: AppColors.blueLight,
+                            ),
+                          ),
+                          const SizedBox(width: 16),
+                          Expanded(
+                            child: _buildInfoCard(
+                              iconWidget: SvgPicture.asset(
+                                'assets/icons/settings_icon_kyc.svg',
+                                width: 24,
+                              ),
+                              title: 'KYC',
+                              subtitle: 'Verified',
+                              customContent: Row(
+                                children: [
+                                  CustomText(
+                                    text: 'KYC',
+                                    type: TextType.subheading,
+                                    fontWeight: FontWeight.w400,
                                   ),
-                                  title: '4.3 ★',
-                                  subtitle: '2,211 rides',
-                                  bgColor: AppColors.blueLight,
-                                ),
-                                const SizedBox(height: 12),
-                                _buildInfoCard(
-                                  iconWidget: SvgPicture.asset(
-                                    'assets/icons/settings_icon_kyc.svg',
-                                    width: 24,
+                                  const SizedBox(width: 4),
+                                  Icon(
+                                    Icons.check_circle_outline,
+                                    color: AppColors.white,
+                                    size: 10,
                                   ),
-                                  title: 'KYC',
-                                  subtitle: 'Verified',
-                                  customContent: Row(
-                                    children: [
-                                      CustomText(
-                                        text: 'KYC',
-                                        type: TextType.subheading,
-                                        fontWeight: FontWeight.w400,
-                                      ),
-                                      const SizedBox(width: 4),
-                                      Icon(
-                                        Icons.check_circle_outline,
-                                        color: AppColors.white,
-                                        size: 10,
-                                      ),
-                                    ],
-                                  ),
-                                  bgColor: AppColors.tealLight,
-                                ),
-                              ],
-                            );
-                          } else {
-                            return Row(
-                              children: [
-                                Expanded(
-                                  child: _buildInfoCard(
-                                    iconWidget: SvgPicture.asset(
-                                      'assets/icons/settings_icon_rides.svg',
-                                      width: 24,
-                                    ),
-                                    title: '4.3 ★',
-                                    subtitle: '2,211 rides',
-                                    bgColor: AppColors.blueLight,
-                                  ),
-                                ),
-                                const SizedBox(width: 16),
-                                Expanded(
-                                  child: _buildInfoCard(
-                                    iconWidget: SvgPicture.asset(
-                                      'assets/icons/settings_icon_kyc.svg',
-                                      width: 24,
-                                    ),
-                                    title: 'KYC',
-                                    subtitle: 'Verified',
-                                    customContent: Row(
-                                      children: [
-                                        CustomText(
-                                          text: 'KYC',
-                                          type: TextType.subheading,
-                                          fontWeight: FontWeight.w400,
-                                        ),
-                                        const SizedBox(width: 4),
-                                        Icon(
-                                          Icons.check_circle_outline,
-                                          color: AppColors.white,
-                                          size: 10,
-                                        ),
-                                      ],
-                                    ),
-                                    bgColor: AppColors.tealLight,
-                                  ),
-                                ),
-                              ],
-                            );
-                          }
-                        },
+                                ],
+                              ),
+                              bgColor: AppColors.tealLight,
+                            ),
+                          ),
+                        ],
                       ),
                       const SizedBox(height: 20),
                       SizedBox(

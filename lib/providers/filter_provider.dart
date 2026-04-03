@@ -8,7 +8,6 @@ class FilterProvider extends ChangeNotifier {
   bool _isCustomerDropdownOpen = false;
   final List<String> _selectedCustomers = [];
 
-  // Getters
   String get selectedPeriod => _selectedPeriod;
   String get selectedStatus => _selectedStatus;
   String get startDate => _startDate;
@@ -16,7 +15,6 @@ class FilterProvider extends ChangeNotifier {
   bool get isCustomerDropdownOpen => _isCustomerDropdownOpen;
   List<String> get selectedCustomers => List.unmodifiable(_selectedCustomers);
 
-  // Batch update method
   void updatePeriodAndDates(String period, String start, String end) {
     _selectedPeriod = period;
     _startDate = start;
@@ -24,7 +22,6 @@ class FilterProvider extends ChangeNotifier {
     notifyListeners();
   }
 
-  // Setters
   void setSelectedPeriod(String period) {
     _selectedPeriod = period;
     notifyListeners();
