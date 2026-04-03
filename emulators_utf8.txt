@@ -1,0 +1,13 @@
+﻿2 available emulators:
+
+Id             ΓÇó Name           ΓÇó Manufacturer ΓÇó Platform
+
+Pixel_6_API_27 ΓÇó Pixel 6 API 27 ΓÇó Google       ΓÇó android
+Pixel_C_API_27 ΓÇó Pixel C API 27 ΓÇó Google       ΓÇó android
+
+To run an emulator, run 'flutter emulators --launch <emulator id>'.
+To create a new emulator, run 'flutter emulators --create [--name xyz]'.
+
+You can find more information on managing emulators at the links below:
+  https://developer.android.com/studio/run/managing-avds
+  https://developer.android.com/studio/command-line/avdmanager
